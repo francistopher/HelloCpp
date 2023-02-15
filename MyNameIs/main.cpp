@@ -10,7 +10,7 @@ int main(int argc, char** argv)
         // will contain a line from the file/lyrics
         string lyricLine;
         // load file contents as TheFile
-        ifstream TheFile("./myNameIs.txt");
+        ifstream TheFile("./lyrics.txt");
         char slimShady[11] = "Slim Shady";
         string out = "";
         // iterates through every lyric line
