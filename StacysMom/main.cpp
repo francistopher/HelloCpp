@@ -11,7 +11,7 @@ int main(int argc, char** argv)
         string lyricLine;
         // load file contents as TheFile
         ifstream TheFile("./lyrics.txt");
-        char slimShady[11] = "Slim Shady";
+        char stacy[6] = "Stacy";
         string out = "";
         // iterates through every lyric line
         while (getline(TheFile, lyricLine))
@@ -20,16 +20,16 @@ int main(int argc, char** argv)
             for (int i = 0, j = 0; i < lyricLine.length(); i++)
             {
                 // to determine which are slim shady // IGNORE TERMINATING CHARACTER
-                while (lyricLine[i + j] == slimShady[j] && slimShady[j] != '\0')
+                while (lyricLine[i + j] == stacy[j] && stacy[j] != '\0')
                 {
                     j++;
                 }
                 // replace Slim Shady
-                if (j == 10)
+                if (j == 5)
                 {
                     // with the name
                     out += argv[1];
-                    i += 10;
+                    i += 5;
                     j = 0;
                 }
                 // add the rest non Slim Shady
